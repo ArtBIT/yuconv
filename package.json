@@ -1,0 +1,12 @@
+{
+  "name": "yuconv",
+  "version": "1.0.0",
+  "description": "Preslojavanje srpskog ćiriličnog pisma u latinično i obratno.",
+  "main": "./index.js",
+  "keywords": ["konverter", "preslojavanje", "cirilica", "latinica", "srpski"],
+  "author": "Djordje Ungar",
+  "license": "MIT",
+  "directories": {
+    "src": "src"
+  }
+}
