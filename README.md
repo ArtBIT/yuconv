@@ -38,7 +38,7 @@ YuConv je jednostavna bilblioteka za kovertovanje srpskog ćiriličnog teksta u 
 
     const yuconv = require('yuconv');
 
-    console.log(yuconv("Здраво", "cyrillic"));
+    console.log(yuconv("Здраво", "latin"));
     // Zdravo
 
 # Licenca
