@@ -11,6 +11,8 @@
 
 YuConv je jednostavna bilblioteka za kovertovanje srpskog ćiriličnog teksta u latinični i obratno.
 
+Ukoliko vam je potrebno konvertovanje iz komandne linije, pogledajte [YuConv-cli](https://github.com/ArtBIT/yuconv-cli)
+
 ---
 
 ### Instalacija
