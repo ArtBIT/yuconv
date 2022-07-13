@@ -35,7 +35,8 @@ Ukoliko vam je potrebno konvertovanje iz komandne linije, pogledajte [YuConv-cli
     const yuconv = require('yuconv');
     
     // korišćenje
-    const result = yuconv(ulazniTekst, željenaTransliteracija);
+    const zeljenaTransliteracija = 'cirilica'; // cirilica | latinica | ascii
+    const result = yuconv(ulazniTekst, zeljenaTransliteracija);
 
 #### Konvertuj tekst iz latiničnog u ćirilično pismo
 
