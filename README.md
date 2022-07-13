@@ -29,18 +29,26 @@ Ukoliko vam je potrebno konvertovanje iz komandne linije, pogledajte [YuConv-cli
 
 ### Primeri korišćenja
 
+#### Opšti slučaj
+    
+    // uvoz bioblioteke
+    const yuconv = require('yuconv');
+    
+    // korišćenje
+    const result = yuconv(ulazniTekst, željenaTransliteracija);
+
 #### Konvertuj tekst iz latiničnog u ćirilično pismo
 
     const yuconv = require('yuconv');
-
-    console.log(yuconv("Zdravo", "cyrillic"));
+    const result = yuconv("Zdravo", "cirilica");
+    console.log(result);
     // Здраво
 
 #### Konvertuj tekst iz ćiriličnog u latinično pismo
 
     const yuconv = require('yuconv');
-
-    console.log(yuconv("Здраво", "latin"));
+    const result = yuconv("Здраво", "latinica");
+    console.log(result);
     // Zdravo
 
 # Licenca
