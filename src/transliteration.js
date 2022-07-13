@@ -71,6 +71,12 @@ const transliterationTree = {
   "yuscii-cyrillic": buildTransliterationTree(CYRILLIC_YUSCII_TO_LATIN)
 };
 
+// aliases
+transliterationTree["latinica"] = transliterationTree["latin"];
+transliterationTree["yuscii-latinica"] = transliterationTree["yuscii-latin"];
+transliterationTree["cirilica"] = transliterationTree["cyrillic"];
+transliterationTree["yuscii-cirilica"] = transliterationTree["yuscii-cyrillic"];
+
 const transliterate = (text, mode) => {
   const tree = transliterationTree[mode];
   if (!tree) {
@@ -79,9 +85,13 @@ const transliterate = (text, mode) => {
   switch (mode) {
     case "ascii":
     case "yuscii-latin":
+    case "yuscii-latinica":
     case "yuscii-cyrillic":
+    case "yuscii-cirilica":
     case "cyrillic":
+    case "cirilica":
     case "latin":
+    case "latinica":
       return applyTransliterationTree(text, tree);
   }
 };

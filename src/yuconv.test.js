@@ -51,7 +51,7 @@ Sve tri navedene aktivnosti sadrže brojne podaktivnosti koje, sinhronizovano im
 ];
 
 const errorCases = [
-  { mode: "latinica", input: "Здраво" },
+  { mode: undefined, input: "Здраво" },
   { mode: "unknown", input: "does not matter" }
 ];
 
