@@ -1,4 +1,4 @@
-const latinToCyrillicMap = {
+const LATIN_TO_CYRILLIC = {
   A: "А",
   B: "Б",
   V: "В",
@@ -10,7 +10,7 @@ const latinToCyrillicMap = {
   Dj: "Ђ",
   E: "Е",
   Ž: "Ж",
-  Ž: "Ж", // Z with caron
+  Ž: "Ж",
   Z: "З",
   I: "И",
   J: "Ј",
@@ -30,21 +30,21 @@ const latinToCyrillicMap = {
   S: "С",
   T: "Т",
   Ć: "Ћ",
-  Ć: "Ћ", // C with acute accent
+  Ć: "Ћ",
   U: "У",
   F: "Ф",
   H: "Х",
   C: "Ц",
   Č: "Ч",
-  Č: "Ч", // C with caron
+  Č: "Ч",
   DŽ: "Џ",
   Ǆ: "Џ",
-  DŽ: "Џ", // D + Z with caron
+  DŽ: "Џ",
   Dž: "Џ",
-  Dž: "Џ", // D + z with caron
+  Dž: "Џ",
   Dz: "Џ",
   Š: "Ш",
-  Š: "Ш", // S with caron
+  Š: "Ш",
   a: "а",
   b: "б",
   v: "в",
@@ -54,7 +54,7 @@ const latinToCyrillicMap = {
   dj: "ђ",
   e: "е",
   ž: "ж",
-  ž: "ж", // z with caron
+  ž: "ж",
   z: "з",
   i: "и",
   ĳ: "иј",
@@ -75,7 +75,7 @@ const latinToCyrillicMap = {
   ﬆ: "ст",
   t: "т",
   ć: "ћ",
-  ć: "ћ", // c with acute accent
+  ć: "ћ",
   u: "у",
   f: "ф",
   ﬁ: "фи",
@@ -83,15 +83,15 @@ const latinToCyrillicMap = {
   h: "х",
   c: "ц",
   č: "ч",
-  č: "ч", // c with caron
+  č: "ч",
   dž: "џ",
   ǆ: "џ",
-  dž: "џ", // d + z with caron
+  dž: "џ",
   š: "ш",
-  š: "ш" // s with caron
+  š: "ш"
 };
 
-const cyrillicToLatinMap = {
+const CYRILLIC_TO_LATIN = {
   А: "A",
   Б: "B",
   В: "V",
@@ -171,7 +171,7 @@ const cyrillicToLatinMap = {
   Џу: "Džu"
 };
 
-const anyToAsciiMap = {
+const ANY_TO_ASCII = {
   А: "A",
   Б: "B",
   В: "V",
@@ -261,7 +261,7 @@ const anyToAsciiMap = {
   ž: "z"
 };
 
-const cyrillicYusciiToLatin = {
+const CYRILLIC_YUSCII_TO_LATIN = {
   "^": "Č",
   "~": "č",
   "]": "Ć",
@@ -295,7 +295,7 @@ const cyrillicYusciiToLatin = {
   x: "dž"
 };
 
-const latinYusciiToLatin = {
+const LATIN_YUSCII_TO_LATIN = {
   "^": "Č",
   "~": "č",
   "]": "Ć",
@@ -308,7 +308,7 @@ const latinYusciiToLatin = {
   "`": "ž"
 };
 
-const serbianWordsWithForeignCharacterCombinations = [
+const TRANSLITERATION_WHITELIST = [
   "aparthejd",
   "ddor",
   "dss",
@@ -338,7 +338,7 @@ const serbianWordsWithForeignCharacterCombinations = [
   "urli"
 ];
 
-const commonForeignWords = [
+const TRANSLITERATION_BLACKLIST = [
   "administration",
   "adobe",
   "advanced",
@@ -439,10 +439,7 @@ const commonForeignWords = [
   "username",
   "viber",
   "viii",
-  "visa"
-];
-
-const foreignCharacterCombinations = [
+  "visa",
   "q",
   "w",
   "x",
@@ -482,7 +479,7 @@ const foreignCharacterCombinations = [
   ".org"
 ];
 
-const digraphExceptions = {
+const DIGRAPH_EXCEPTIONS = {
   dj: [
     "adjektiv",
     "adjunkt",
@@ -747,7 +744,7 @@ const digraphExceptions = {
 };
 
 // See: https://en.wikipedia.org/wiki/Zero-width_non-joiner
-const digraphReplacements = {
+const DIGRAPH_REPLACEMENTS = {
   dj: {
     dj: "d\u200Cj",
     Dj: "D\u200Cj",
@@ -766,14 +763,13 @@ const digraphReplacements = {
 };
 
 module.exports = {
-  latinToCyrillicMap,
-  cyrillicToLatinMap,
-  anyToAsciiMap,
-  cyrillicYusciiToLatin,
-  latinYusciiToLatin,
-  serbianWordsWithForeignCharacterCombinations,
-  commonForeignWords,
-  foreignCharacterCombinations,
-  digraphExceptions,
-  digraphReplacements
+  LATIN_TO_CYRILLIC,
+  CYRILLIC_TO_LATIN,
+  ANY_TO_ASCII,
+  CYRILLIC_YUSCII_TO_LATIN,
+  LATIN_YUSCII_TO_LATIN,
+  TRANSLITERATION_WHITELIST,
+  TRANSLITERATION_BLACKLIST,
+  DIGRAPH_EXCEPTIONS,
+  DIGRAPH_REPLACEMENTS
 };
