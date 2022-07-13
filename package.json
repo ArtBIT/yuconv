@@ -3,10 +3,16 @@
   "version": "1.0.1",
   "description": "Preslojavanje srpskog ćiriličnog pisma u latinično i obratno.",
   "main": "./index.js",
+  "scripts": {
+    "test": "jest"
+  },
   "keywords": ["konverter", "preslojavanje", "cirilica", "latinica", "srpski"],
   "author": "Djordje Ungar",
   "license": "MIT",
   "directories": {
     "src": "src"
+  },
+  "dependencies": {
+    "jest": "^28.1.2"
   }
 }
