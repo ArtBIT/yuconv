@@ -1,6 +1,6 @@
 {
   "name": "yuconv",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Preslojavanje srpskog ćiriličnog pisma u latinično i obratno.",
   "main": "./index.js",
   "repository": {
