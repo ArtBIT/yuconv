@@ -71,10 +71,14 @@ const yuconv = (text, mode) => {
   switch (mode) {
     case "ascii":
     case "yuscii-latin":
+    case "yuscii-latinica":
     case "yuscii-cyrillic":
+    case "yuscii-cirilica":
     case "latin":
+    case "latinica":
       return transliterate(text, mode);
     case "cyrillic":
+    case "cirilica":
       return replaceLatinToCyrillic(text);
     default:
       throw new Error("Unknown conversion target");
