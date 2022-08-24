@@ -1,7 +1,7 @@
 const {
   LATIN_TO_CYRILLIC,
   CYRILLIC_TO_LATIN,
-  ANY_TO_YUSCII,
+  ANY_TO_ASCII,
   CYRILLIC_YUSCII_TO_LATIN,
   LATIN_YUSCII_TO_LATIN
 } = require("./constants");
@@ -66,7 +66,7 @@ const applyTransliterationTree = (str, tree) => {
 const transliterationTree = {
   cyrillic: buildTransliterationTree(LATIN_TO_CYRILLIC),
   latin: buildTransliterationTree(CYRILLIC_TO_LATIN),
-  ascii: buildTransliterationTree(ANY_TO_YUSCII),
+  ascii: buildTransliterationTree(ANY_TO_ASCII),
   "yuscii-latin": buildTransliterationTree(LATIN_YUSCII_TO_LATIN),
   "yuscii-cyrillic": buildTransliterationTree(CYRILLIC_YUSCII_TO_LATIN)
 };
